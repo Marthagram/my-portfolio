@@ -46,6 +46,7 @@ span{
     grid-template-columns: 1fr 1fr 1fr;
     width: 1200px;
     margin: 0 auto;
+    justify-items: center;
     border-top: 1px solid grey;
     background-color: rgb(138, 138, 138);
     font-size: 20px;
@@ -54,9 +55,11 @@ span{
     width: 1200px;
     margin: 0 auto;
     height: 30em;
+}
+li{
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
+    justify-content: space-between;
 }
 .wwr-link, .codes{
     font-size: 40px;
