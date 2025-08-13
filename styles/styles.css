@@ -9,7 +9,7 @@ header, main, footer{
 .navigation{
     display: flex;
     width: 1200px;
-    height: 40px;
+    height: 80px;
     margin: 0 auto;
     flex-direction: row;
     justify-content: space-evenly;
@@ -17,7 +17,9 @@ header, main, footer{
 }
 .navigation a{
     margin-top: 15px;
+    font-size: 17px;
     color: black;
+    margin-top: 1.5em;
 }
 
 .body-container{
@@ -38,11 +40,20 @@ header, main, footer{
     
 }
     
-.main-body p{
+.main-body > p{
+    grid-column: 2 / 3;
+    grid-row: 1/2;
     font-size: 40px;
-    margin-top: 6em;
+    margin-top: 1em;
     margin-left: 20px;
 }
+.main-body > p:last-of-type{
+    font-size: 40px;
+    margin-top: 9em;
+    margin-left: 20px;
+}
+
+
 span{
     color: rgb(90, 163, 12);
 }
@@ -51,7 +62,7 @@ span{
     grid-template-columns: 1fr 1fr 1fr;
     width: 1200px;
     margin:  0 auto;
-    margin-top: 15em;
+    margin-top: 5em;
     justify-items: center;
     border-top: 1px solid grey;
     background-color: rgb(138, 138, 138);
@@ -65,11 +76,13 @@ span{
     margin-top: 1em;
 }
 .footer-body > a:last-of-type{
-    color: rgb(238, 35, 8);
+    color: rgb(146, 36, 21);
     text-decoration: underline;
     margin-top: 1em;
 }
-
+.footer-body > a:hover{
+    color: rgb(235, 214, 109);
+}
 
 
 
