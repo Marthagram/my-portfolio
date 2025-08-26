@@ -32,6 +32,7 @@ header, main, footer{
     grid-template-columns: 1fr 1fr;
 }
 .main-body img{
+    box-shadow: 0 0 40px grey;
     width: 80%;
     height: auto;
     margin: 0 auto;
@@ -53,6 +54,62 @@ header, main, footer{
     margin-left: 20px;
 }
 
+/* PROJECT PAGE STYLES */
+.rafting{
+    padding-top: 1.5em;
+    display:grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+}
+
+.rafting > img{
+    grid-row: 1/2;
+    box-shadow: 0 0 40px grey;
+}
+
+.rafting > li{
+    grid-row: 2/3;
+}
+
+.poultry{
+    border-top: 1px solid black;
+    padding-top: 2em;
+    display:grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+}
+
+.poultry> img{
+    grid-row: 1/2;
+    box-shadow: 0 0 40px grey;
+}
+
+.poultry > li{
+    grid-row: 2/3;
+}
+
+
+.rafting > li, .poultry > li {
+
+    margin-top: 2em;
+    font-size: 20px;
+   
+
+}
+
+ul > li {
+
+    margin-top: 2em;
+    font-size: 18px;
+   
+} 
+
+
+
+a:hover{
+    color:rgb(148, 142, 111);
+}
+
 
 span{
     color: rgb(90, 163, 12);
@@ -71,7 +128,7 @@ span{
     
 }
 .footer-body > a:first-of-type{
-    color: rgb(238, 35, 8);
+    color: rgb(146, 36, 21);
     text-decoration: underline;
     margin-top: 1em;
 }
@@ -86,19 +143,6 @@ span{
 
 
 
-ul> li:last-of-type {
-
-    margin-top: 10em;
-    font-size: 20px;
-}
-ul> li:first-of-type {
-
-    margin-top: 5em;
-    font-size: 20px;
-
-}
 
 
-a:hover{
-    color:rgb(148, 142, 111);
-}
+
