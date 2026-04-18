@@ -7,25 +7,31 @@ header, main, footer{
     margin: 0 auto;
     
 }
+
 .navigation{
     display: flex;
-    width: 100%;
-    flex-direction: row;
     justify-content: space-evenly;
-  
+    border: 1.5px solid#ddd;
 }
-.head-container{
-    background-color: gold;
+
+
+
+header , main, .navigation{
+    background-color: yellow;
     text-align: center;
     padding: 1em;
+    font-size: 1.2em;
 }
-.navigation a{
-    font-size: 17px;
+.navigation a, #project_link{
+    
     color: black;
+    font-size: 1.5em;
+   
     
 }
-
-
+.navigation a:hover, #project_link:hover{
+    color: red;
+}
 
 .main-body{
     display: grid;
@@ -61,66 +67,21 @@ header, main, footer{
 }
 
 /* PROJECT PAGE STYLES */
-.rafting{
-    padding-top: 1.5em;
-    display:grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr;
+#main-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 0.8rem;
 }
-
-.rafting > img{
-    grid-row: 1/2;
+section{
+    background-color: #ddd;
+    padding-bottom: 1.2rem;
+}
+section img{
     box-shadow: 0 0 40px grey;
+    
 }
 
-.rafting > li{
-    grid-row: 2/3;
-}
-
-.poultry{
-    border-top: 1px solid black;
-    padding-top: 2em;
-    display:grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr;
-}
-
-.poultry> img{
-    grid-row: 1/2;
-    box-shadow: 0 0 40px grey;
-}
-
-.poultry > li{
-    grid-row: 2/3;
-}
-
-
-.rafting > li, .poultry > li {
-
-    margin-top: 2em;
-    font-size: 20px;
-   
-
-}
-
-ul > li {
-
-    margin-top: 2em;
-    font-size: 18px;
-   
-} 
-
-
-
-a:hover{
-    color:white;
-}
-
-
-span{
-    color: rgba(15, 150, 3, 0.938);
-    font-size: 1.5rem;
-}
+/* footer page styles */
 .footer-body{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;

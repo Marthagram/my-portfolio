@@ -1,0 +1,18 @@
+{
+    "projects":[
+                    {
+                        "image": "images/pullet_images.jpeg",
+                        "title": "Pullet",
+                        "description": "Layers/pullets photo",
+                        "website": "https:/marthagram.github.io/otasfarmintegrated"
+                    },
+
+                    {
+                        "image": "images/rafting-adventure5.jpeg",
+                        "title": "Water Rafting Website",
+                        "description": "picture of rafters in water",
+                        "website": "https:/marthagram.github.io/wdd130/wwr"
+    
+                    }
+            ]
+}
