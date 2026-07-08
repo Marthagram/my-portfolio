@@ -1,5 +1,5 @@
 const mainContainer = document.querySelector("#main-container");
-const filePath = "../data/projects.json";
+const filePath = "./data/projects.json";
 
 async function fetchProjects() {
     try{
