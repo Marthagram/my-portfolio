@@ -1,52 +1,29 @@
 const mainContainer = document.querySelector("#main-container");
-const filePath = "./data/projects.json";
+const filePath = "../data/projects.json"; // relative to index.html
 
 async function fetchProjects() {
     try{
         const response = await fetch(filePath);
-        if (!response.ok) {
-            throw new Error(`HTTP error! status: ${response.status}`);
-        }   
+        if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);  
         const data = await response.json();
-        console.log(data.projects)
-        displayProjects(data.projects)
-        } 
-    catch (error) {
-        console.log(error);
+        displayProjects(data.projects) 
+    } catch (error) {
+        console.error("Fetch failed:", error);
+        mainContainer.innerHTML = `<p>Could not load projects. Check console.</p>`;
     }
- }
+}
+fetchProjects();
 
- fetchProjects();
-
-
- function displayProjects(data){
+function displayProjects(data){
+    mainContainer.innerHTML = "";
     data.forEach(datum => {
         const section = document.createElement("section");
-        const h2 =  document.createElement("h2");
-        const img = document.createElement("img");
-        const p2 = document.createElement("p");
-        const a = document.createElement("a");
-
-        h2.innerHTML = `${datum.title}`;
-        p2.innerHTML = ` Description: ${datum. description}`;
-        a.setAttribute('href', datum.website)
-
-        // populate image
-        img.setAttribute('SRC', datum.image);
-        img.setAttribute('alt', datum.description );
-        img.setAttribute('loading', 'lazy');
-
-
-        //appending these elements to section element
-
-        section.appendChild(h2);
-        section.appendChild(img);
-        section.appendChild(p2);
-        section.innerHTML += `<a href="${datum.website}">Visit Website</a>`;
-
+        section.innerHTML = `
+            <h2>${datum.title}</h2>
+            <img src="${datum.image}" alt="${datum.description}" loading="lazy">
+            <p>Description: ${datum.description}</p>
+            <a href="${datum.website}" target="_blank" rel="noopener noreferrer">Visit Website</a>
+        `;
         mainContainer.appendChild(section);
-
     });
-   
-
- }
+}
